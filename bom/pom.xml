@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>io.smallrye.reactive</groupId>
+        <artifactId>mutiny-project</artifactId>
+        <version>999-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>mutiny-bom</artifactId>
+    <packaging>pom</packaging>
+
+    <name>SmallRye Mutiny - BOM</name>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>eu.maveniverse.maven.plugins</groupId>
+                <artifactId>bom-builder3</artifactId>
+                <version>${bom-builder3.version}</version>
+                <executions>
+                    <execution>
+                        <id>build-bom</id>
+                        <goals>
+                            <goal>build-bom</goal>
+                        </goals>
+                        <configuration>
+                            <bomName>SmallRye Mutiny - BOM</bomName>
+                            <bomDescription>Mutiny BOM</bomDescription>
+                            <attach>true</attach>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
